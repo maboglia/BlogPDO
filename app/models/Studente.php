@@ -16,11 +16,23 @@ class Studente {
     public $nome;
     public $cognome;
     public $matricola;
-    public $data_nascita;
+    public $data;
     public $email;
     public $eta=10;
     
     public function __construct() {
-        echo "studente costruito";
+        echo "studente costruito...";
+    }
+
+    public function getEta()
+    {
+        $datetime1 = new DateTime($this->data);
+        $datetime2 = new DateTime("now");
+        $interval = $datetime1->diff($datetime2);
+        return $interval->format('%R%a days');
+    }
+
+    public function __toString(){
+        return $this->id . ' ' . $this->nome . ' ' . $this->cognome . ' ' . $this->matricola . ' ' . $this->getEta() . ' ';
     }
 }
