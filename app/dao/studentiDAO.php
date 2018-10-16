@@ -104,4 +104,27 @@ class StudentiDAO
         return false;
     }
 
+    public function insert($studente)
+    {
+        try {
+            $stmt = $this->connessione->prepare("INSERT INTO studenti (nome,cognome) VALUES(:nome , :cognome)");
+
+            $nome = $studente->nome;
+            $cognome = $studente->cognome;
+            
+
+            $stmt->bindParam(":nome", $nome, PDO::PARAM_STR);
+            $stmt->bindParam(":cognome", $cognome, PDO::PARAM_STR);
+
+            if ($stmt->execute()) {
+
+                echo "Inserita la riga con id : " . $this->connessione->lastInsertId();
+
+            }
+
+
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }
 }
