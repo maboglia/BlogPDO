@@ -1,6 +1,6 @@
 <h1>Dettaglio Studenti</h1>
 
-<p><a href="../../students/index" class="btn btn-primary">elenco</a></p>
+<p><a href="?url=students/index" class="btn btn-primary">elenco</a></p>
 
 <?php foreach ($data['studenti'] as $studente) : ?>
 
@@ -9,4 +9,4 @@
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis natus atque minima obcaecati molestiae maiores eius consequuntur assumenda cumque sint velit, suscipit inventore, necessitatibus ducimus mollitia. Fuga deserunt vel itaque.</p>
     
     <?php endforeach; ?>
-    <p><a href="../delete/<?= $studente->id ?>" class="btn btn-danger">elimina</a></p>
+    <p><a href="?url=students/delete/<?= $studente->id ?>" class="btn btn-danger">elimina</a></p>
