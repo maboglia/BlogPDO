@@ -12,17 +12,35 @@
  * @author docente
  */
 class Studente {
-    public $id;
-    public $nome;
-    public $cognome;
-    public $matricola;
-    public $data;
-    public $email;
-    public $eta=10;
+
+    private $id;
+    private $nome;
+    private $cognome;
+    private $matricola;
+    private $data;
+    private $email;
+    private $eta=10;
     
+    private static $numeroMatricola = 0;
+
+    //costruttore
     public function __construct() {
-        echo "studente costruito...";
+        self::$numeroMatricola = self::$numeroMatricola + 1;
+        echo "studente inserito, numero di matricola: ". self::$numeroMatricola;
+
     }
+
+    //metodi getter e setter generici
+    public function __get($nomeAttributo)
+    {
+        return $this->$nomeAttributo;
+    }
+
+    public function __set($nomeAttributo, $value)
+    {
+        if (isset($value)) $this->$nomeAttributo = $value;
+    }
+
 
     public function getEta()
     {
