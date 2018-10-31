@@ -3,7 +3,7 @@ Options -MultiViews
 
 RewriteEngine On 
 
-RewriteBase /coding/Studente_PDO/public
+RewriteBase /coding/public
 
 # esegui solo se la regola è vera (-d directory, -f file regolare, ! negazione)
 RewriteCond %{REQUEST_FILENAME} !-d

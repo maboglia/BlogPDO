@@ -8,10 +8,13 @@
     <p><?= $data['messaggio'] ?></p>
 
 <?php endif; ?>
+<table class="table table-striped">
+    <?php foreach ($data['studenti'] as $studente) : ?>
+        <tr>
+        <td><a href='?url=students/vista/<?= $studente->id ?>'><?= $studente->nome ?><?= $studente->cognome ?></a></td>
+        <td class="nomeStudente"><?= $studente ?></td>
+        <td><button class="btn btn-warning anvedi" title="<?= $studente->id ?>">vedi</button></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
 
-<?php foreach ($data['studenti'] as $studente) : ?>
-
-    <h2><a href='?url=students/vista/<?= $studente->id ?>'><?= $studente->nome ?><?= $studente->cognome ?></a></h2>
-    <h3><?= $studente ?></h3>
-
-<?php endforeach; ?>

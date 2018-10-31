@@ -26,7 +26,7 @@ class Studente {
     //costruttore
     public function __construct() {
         self::$numeroMatricola = self::$numeroMatricola + 1;
-        echo "studente inserito, numero di matricola: ". self::$numeroMatricola;
+        //echo "studente inserito, numero di matricola: ". self::$numeroMatricola;
 
     }
 

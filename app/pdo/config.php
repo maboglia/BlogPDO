@@ -8,6 +8,6 @@ define("MAX_POST_PAGE", 10);
 
 
 define('DB_HOST', "localhost");
-define('DB_USER', "its_2018");
-define('DB_PASS', "its_2018!ITS");
+define('DB_USER', "root");
+define('DB_PASS', "");
 define('DB_NAME', "its_2018");
