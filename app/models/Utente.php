@@ -7,26 +7,21 @@
  */
 
 /**
- * Description of Studente
+ * Description of Utente
  *
  * @author docente
  */
-class Studente {
+class Utente {
 
     private $id;
     private $nome;
     private $cognome;
-    private $matricola;
-    private $data;
     private $email;
-    private $eta=10;
+    private $password;
+    private $ruolo;
     
-    private static $numeroMatricola = 0;
-
     //costruttore
     public function __construct() {
-        self::$numeroMatricola = self::$numeroMatricola + 1;
-        //echo "studente inserito, numero di matricola: ". self::$numeroMatricola;
 
     }
 
@@ -42,15 +37,7 @@ class Studente {
     }
 
 
-    public function getEta()
-    {
-        $datetime1 = new DateTime($this->data);
-        $datetime2 = new DateTime("now");
-        $interval = $datetime1->diff($datetime2);
-        return $interval->format('%R%a days');
-    }
-
     public function __toString(){
-        return $this->id . ' ' . $this->nome . ' ' . $this->cognome . ' ' . $this->matricola . ' ' . $this->getEta() . ' ';
+        return $this->nome . ' ' . $this->cognome . ' ' . $this->email.'';
     }
 }
