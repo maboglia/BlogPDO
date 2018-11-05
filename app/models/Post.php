@@ -3,10 +3,11 @@
 
 class Post {
 
+    /** seleziona come pubblici i campi che vuoi esportare in JSON */
 private $id;
-private $titolo;
-private $sottotitolo;
-private $testo;
+public $titolo;
+public $sottotitolo;
+public $testo;
 private $id_autore;
 
     
@@ -34,6 +35,10 @@ private $id_autore;
         return $utente->findOne($this->id);
     }
 
+    public function getJSON()
+    {
+        return Json::encode($this);
+    }
 
     public function __toString()
     {

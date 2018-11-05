@@ -16,15 +16,39 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?url=users/index">Utenti</a>
+<!-- menu utenti -->
+<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Utenti</a>
+    
+	<div class="dropdown-menu">
+		<a class="dropdown-item" href="?url=users/index">Elenco</a>
+		<a class="dropdown-item" href="?url=users/insert">Aggiungi</a>
+	</div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?url=categories/index">Categorie</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?url=posts/index">Post</a>
-      </li>
+	  
+	<!-- menu Categorie -->
+	  
+	<li class="nav-item dropdown">
+		  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorie</a>
+    
+		<div class="dropdown-menu">
+					<a class="dropdown-item" href="?url=categories/index">Elenco</a>
+					<a class="dropdown-item" href="?url=categories/insert">Aggiungi</a>
+		</div>
+	</li>
+	  
+	<!-- menu Post -->
+	  
+	<li class="nav-item dropdown">
+		  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Post</a>
+    
+		<div class="dropdown-menu">
+					<a class="dropdown-item" href="?url=posts/index">Elenco</a>
+					<a class="dropdown-item" href="?url=posts/insert">Aggiungi</a>
+		</div>
+	</li>
+	  
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

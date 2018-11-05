@@ -87,9 +87,12 @@ public function json($id=1)
                 // $data = $post->findAll();
                 // /** whatever you're serializing **/;
                 $post = $this->model("PostDAO");
-                $data = $post->findOne($id);
+                $data = $post->findAll();
+        // echo "<pre>";
+        // print_r($data);
+        // echo "</pre>";
                  header('Content-Type: application/json');
-                 echo json_encode($data[0]->titolo);
+                 echo json_encode($data);
 
             //echo $data[0]->titolo;
 

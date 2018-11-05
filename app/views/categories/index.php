@@ -1,6 +1,5 @@
 <h1>Elenco categorie</h1>
 
-<p><a href="?url=categories/insert" class="btn btn-primary">aggiungi</a></p>
 
 
 <?php if (isset($data['messaggio'])) : ?>
